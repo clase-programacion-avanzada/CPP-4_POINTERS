@@ -3,7 +3,7 @@
 using namespace std;
 
 //Link to python tutor (Copy and paste it, don't click it):
-// https://pythontutor.com/render.html#code=%23include%20%3Ciostream%3E%0A%0A%0Ausing%20namespace%20std%3B%0A%0Avoid%20func3%28%29%20%7B%0A%20%20%20%20char%20letter%20%3D%20'D'%3B%0A%7D%0A%0A%0Avoid%20func2%28%29%20%7B%0A%20%20%20%20char%20letter%20%3D%20'C'%3B%0A%20%20%20%20func3%28%29%3B%0A%7D%0A%0Avoid%20func1%28%29%20%7B%0A%20%20%20%20char%20letter%20%3D%20'B'%3B%0A%20%20%20%20func2%28%29%3B%0A%7D%0A%0A%0A%0Aint%20main%28%29%7B%0A%20%20%20%20%0A%20%20%20%20/*%0A%20%20%20%20Variables%20created%20in%20stack%20memory%0A%20%20%20%20Variables%20declared%20with%20an%20identifier%20are%20stored%20in%20stack%20memory.%20%0A%20%20%20%20*/%0A%20%20%20%0A%20%20%20%20char%20letter%20%3D%20'A'%3B%0A%20%20%20%20%0A%20%20%20%20/*%0A%20%20%20%20When%20a%20function%20is%20called,%20the%20variables%20declared%20in%20the%20function%20are%20stored%20in%20stack%20memory.%0A%20%20%20%20The%20variables%20have%20a%20local%20scope,%0A%20%20%20%20which%20means%20that%20they%20can%20only%20be%20accessed%20inside%20the%20function.%0A%20%20%20%20When%20the%20function%20returns,%20the%20variables%20are%20deleted%20from%20stack%20memory.%0A%20%20%20%20*/%0A%20%20%20%20func1%28%29%3B%0A%20%20%20%20%0A%20%20%20%20//in%20this%20case,%20the%20pointer%20is%20pointing%20to%20the%20memory%20address%20%0A%20%20%20%20//of%20the%20variable%20letter%0A%20%20%20%20char*%20pointer%20%3D%20%26letter%3B%0A%20%20%20%20%0A%20%20%20%20//the%20value%20of%20the%20variable%20letter%20is%20printed%0A%20%20%20%20cout%20%3C%3C%20%22The%20value%20of%20the%20variable%20letter%20is%3A%20%22%20%3C%3C%20letter%20%3C%3C%20endl%3B%0A%20%20%20%20//the%20%26%20operator%20returns%20the%20memory%20address%20of%20the%20variable%0A%20%20%20%20cout%20%3C%3C%20%22The%20value%20of%20the%20memory%20address%20of%20the%20variable%20letter%20is%3A%20%22%20%3C%3C%20%28int%20*%29%20%26letter%20%3C%3C%20endl%3B%0A%20%20%20%20//if%20we%20print%20the%20pointer,%20we%20will%20get%20the%20memory%20address%20of%20the%20variable%20letter%0A%20%20%20%20cout%20%3C%3C%20%22The%20value%20of%20the%20memory%20address%20pointed%20by%20pointer%20is%3A%20%22%20%3C%3C%20%28int*%29%20pointer%20%3C%3C%20endl%3B%0A%20%20%20%20//the%20*%20operator%20returns%20the%20value%20of%20the%20variable%20pointed%20by%20the%20pointer%0A%20%20%20%20cout%20%3C%3C%20%22The%20value%20of%20the%20variable%20pointed%20by%20pointer%20is%3A%20%22%20%3C%3C%20*pointer%20%3C%3C%20endl%3B%0A%20%20%20%20cout%20%3C%3Cendl%3B%0A%20%20%20%20%0A%0A%0A%20%20%20%20return%200%3B%0A%7D&cppShowMemAddrs=true&cumulative=false&curInstr=21&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=cpp_g%2B%2B9.3.0&rawInputLstJSON=%5B%5D&textReferences=false
+// https://pythontutor.com/render.html#code=%23include%20%3Ciostream%3E%0A%0A%0Ausing%20namespace%20std%3B%0A%0Avoid%20func3%28%29%20%7B%0A%20%20%20%20char%20letter%20%3D%20'D'%3B%0A%7D%0A%0A%0Avoid%20func2%28%29%20%7B%0A%20%20%20%20char%20letter%20%3D%20'C'%3B%0A%20%20%20%20func3%28%29%3B%0A%7D%0A%0Avoid%20func1%28%29%20%7B%0A%20%20%20%20char%20letter%20%3D%20'B'%3B%0A%20%20%20%20func2%28%29%3B%0A%7D%0A%0A%0Aint%20main%28%29%7B%0A%20%20%20%0A%20%20%20%20char%20letter%20%3D%20'A'%3B%0A%20%20%20%20%0A%20%20%20%20func1%28%29%3B%0A%20%20%20%20%0A%20%20%20%20char*%20pointer%20%3D%20%26letter%3B%0A%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20cout%20%3C%3C%20%22The%20value%20of%20the%20variable%20letter%20is%3A%20%22%20%3C%3C%20letter%20%3C%3C%20endl%3B%0A%20%20%20%20cout%20%3C%3C%20%22The%20value%20of%20the%20memory%20address%20of%20the%20variable%20letter%20is%3A%20%22%20%3C%3C%20%28int%20*%29%20%26letter%20%3C%3C%20endl%3B%0A%20%20%20%20cout%20%3C%3C%20%22The%20value%20of%20the%20memory%20address%20pointed%20by%20pointer%20is%3A%20%22%20%3C%3C%20%28int*%29%20pointer%20%3C%3C%20endl%3B%0A%20%20%20%20cout%20%3C%3C%20%22The%20value%20of%20the%20variable%20pointed%20by%20pointer%20is%3A%20%22%20%3C%3C%20*pointer%20%3C%3C%20endl%3B%0A%20%20%20%20cout%20%3C%3Cendl%3B%0A%0A%20%20%20%20char%20**pointerToPointer%20%3D%20%26pointer%3B%0A%20%20%20%20char%20***pointerToPointerToPointer%20%3D%20%26pointerToPointer%3B%0A%0A%20%20%20%20cout%20%3C%3C%20%22The%20value%20of%20the%20variable%20pointed%20by%20pointer%20is%3A%20%22%20%3C%3C%20**pointerToPointer%20%3C%3C%20endl%3B%0A%20%20%20%20cout%20%3C%3C%20%22The%20value%20of%20the%20variable%20pointed%20by%20pointerToPointer%20is%3A%20%22%20%3C%3C%20***pointerToPointerToPointer%20%3C%3C%20endl%3B%0A%0A%20%20%0A%20%20%20%20return%200%3B%0A%7D&cppShowMemAddrs=true&cumulative=false&curInstr=24&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=cpp_g%2B%2B9.3.0&rawInputLstJSON=%5B%5D&textReferences=false
 void func3() {
     char letter = 'D';
 }
@@ -50,8 +50,21 @@ int main(){
     //the * operator returns the value of the variable pointed by the pointer
     cout << "The value of the variable pointed by pointer is: " << *pointer << endl;
     cout <<endl;
-    
 
+    //The * which is before the pointer is called the dereference operator
+    //Sometimes we will find more than one * in a row, like ** or ***.
+    //This is used to create pointers to pointers, or pointers to pointers to pointers, and so on.
+
+    char **pointerToPointer = &pointer;
+    char ***pointerToPointerToPointer = &pointerToPointer;
+
+    //The value of the variable pointed by pointer is printed
+    cout << "The value of the variable pointed by pointer is: " << **pointerToPointer << endl;
+    //The value of the variable pointed by pointerToPointer is printed
+    cout << "The value of the variable pointed by pointerToPointer is: " << ***pointerToPointerToPointer << endl;
+
+    //This is useful when we want to create dynamic arrays, 
+    // or when we want to create multi-dimensional arrays. We will see that in the next examples.
 
     return 0;
 }
